@@ -6,45 +6,43 @@ codeunit 73050003 "Exampl Jnl.-Post Line"
 
   trigger OnRun();
   begin
-    GetGLSetup;
-    RunWithCheck(Rec);
+    TestNear(Rec);
+    TestFar(Rec);
+    DoIt(Rec);
   end;
 
   var
-    GLSetup : Record 98;
-    ExJnlLine : Record 72050013;
-    ExLedgEntry : Record 72050011;
     ExamplePerson : Record 72050010;
     ExReg : Record 72050015;
-    ExJnlCheckLine : Codeunit 72050002;
-    NextEntryNo : Integer;
-    GLSetupRead : Boolean;
+    EntryNo : Integer;
 
-  PROCEDURE GetExReg(VAR NewExReg : Record 72050015);
-  begin
-    NewExReg := ExReg;
-  end;
+    local procedure TestNear(ExJnlLine : Record "Ex. Journal Line");
 
-  PROCEDURE RunWithCheck(VAR ExJnlLine2 : Record 72050013);
-  begin
-    ExJnlLine.COPY(ExJnlLine2);
-    Code;
-    ExJnlLine2 := ExJnlLine;
-  end;
-
-  LOCAL PROCEDURE "Code"();
-  begin
-    WITH ExJnlLine DO BEGIN
+    begin
+    WITH ExJnlLine DO 
       IF EmptyLine THEN
         EXIT;
+    end;
+    local procedure TestFar(ExJnlLine : Record "Ex. Journal Line");
+    var
+        ExJnlCheckLine : Codeunit 72050002;
 
+    begin
       ExJnlCheckLine.RunCheck(ExJnlLine);
 
-      IF NextEntryNo = 0 THEN BEGIN
+    end;
+    local procedure DoIt(ExJnlLine : Record "Ex. Journal Line");
+    var
+        ExLedgEntry : Record 72050011;
+
+    begin
+          WITH ExJnlLine DO begin
+            
+      IF EntryNo = 0 THEN BEGIN
         ExLedgEntry.LOCKTABLE;
         IF ExLedgEntry.FINDLAST THEN
-          NextEntryNo := ExLedgEntry."Entry No.";
-        NextEntryNo := NextEntryNo + 1;
+          EntryNo := ExLedgEntry."Entry No.";
+        EntryNo := EntryNo + 1;
       END;
 
       IF "Document Date" = 0D THEN
@@ -55,8 +53,8 @@ codeunit 73050003 "Exampl Jnl.-Post Line"
         IF (NOT ExReg.FINDLAST) OR (ExReg."To Entry No." <> 0) THEN BEGIN
           ExReg.INIT;
           ExReg."No." := ExReg."No." + 1;
-          ExReg."From Entry No." := NextEntryNo;
-          ExReg."To Entry No." := NextEntryNo;
+          ExReg."From Entry No." := EntryNo;
+          ExReg."To Entry No." := EntryNo;
           ExReg."Creation Date" := TODAY;
           ExReg."Source Code" := "Source Code";
           ExReg."Journal Batch Name" := "Journal Batch Name";
@@ -64,7 +62,7 @@ codeunit 73050003 "Exampl Jnl.-Post Line"
           ExReg.INSERT;
         END;
       END;
-      ExReg."To Entry No." := NextEntryNo;
+      ExReg."To Entry No." := EntryNo;
       ExReg.MODIFY;
 
       ExLedgEntry.INIT;
@@ -85,26 +83,22 @@ codeunit 73050003 "Exampl Jnl.-Post Line"
       ExLedgEntry."Gen. Bus. Posting Group" := "Gen. Bus. Posting Group";
       ExLedgEntry."Gen. Prod. Posting Group" := "Gen. Prod. Posting Group";
       ExLedgEntry."No. Series" := "Posting No. Series";
-      GetGLSetup;
 
       WITH ExLedgEntry DO BEGIN
         IF "Entry Type" = "Entry Type"::Sale THEN
           Quantity := -Quantity;
         "User ID" := USERID;
-        "Entry No." := NextEntryNo;
+        "Entry No." := EntryNo;
       END;
 
       ExLedgEntry.INSERT;
 
-      NextEntryNo := NextEntryNo + 1;
+      EntryNo := EntryNo + 1;
     END;
-  end;
 
-  LOCAL PROCEDURE GetGLSetup();
-  begin
-    IF NOT GLSetupRead THEN
-      GLSetup.GET;
-    GLSetupRead := TRUE;
-  end;
+    END;
+
+
+
 }
 

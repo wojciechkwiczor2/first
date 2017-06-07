@@ -1,4 +1,4 @@
-page 72050000 ExampleSetup
+page 72050000 "Example Setup"
 {
     PageType = Card;
     SourceTable = ExampleSetup;

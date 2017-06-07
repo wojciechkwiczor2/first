@@ -14,7 +14,7 @@ pageextension 70000022 CustomerListExtension extends "Customer List"
             action("Example Setup")
             {
                 Image = Setup;
-                RunObject = page ExampleSetup;
+                RunObject = page "Example Setup";
             }
         }
     }

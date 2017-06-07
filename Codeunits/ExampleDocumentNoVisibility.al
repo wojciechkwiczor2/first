@@ -10,7 +10,7 @@ codeunit 72051400 ExampleDocumentNoVisibility
   PROCEDURE ExamplePersonNoIsVisible() : Boolean;
   var
     NoSeries : Record 308;
-    ExampleSetup : Page ExampleSetup;
+    ExampleSetup : Page "Example Setup";
     NoSeriesCode : Code[10];
   begin
     NoSeriesCode := DetermineExamplePersonSeriesNo;

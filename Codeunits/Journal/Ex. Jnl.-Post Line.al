@@ -100,11 +100,6 @@ codeunit 72050003 "Ex. Jnl.-Post Line"
     END;
   end;
 
-  LOCAL PROCEDURE GetGLSetup();
-  begin
-    IF NOT GLSetupRead THEN
-      GLSetup.GET;
-    GLSetupRead := TRUE;
-  end;
+
 }
 

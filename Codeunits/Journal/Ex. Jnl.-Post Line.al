@@ -6,7 +6,7 @@ codeunit 72050003 "Ex. Jnl.-Post Line"
 
   trigger OnRun();
   begin
-    GetGLSetup;
+    //GetGLSetup;
     RunWithCheck(Rec);
   end;
 
@@ -85,7 +85,7 @@ codeunit 72050003 "Ex. Jnl.-Post Line"
       ExLedgEntry."Gen. Bus. Posting Group" := "Gen. Bus. Posting Group";
       ExLedgEntry."Gen. Prod. Posting Group" := "Gen. Prod. Posting Group";
       ExLedgEntry."No. Series" := "Posting No. Series";
-      GetGLSetup;
+      //GetGLSetup;
 
       WITH ExLedgEntry DO BEGIN
         IF "Entry Type" = "Entry Type"::Sale THEN

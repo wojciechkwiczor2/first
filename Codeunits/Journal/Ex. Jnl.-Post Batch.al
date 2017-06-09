@@ -7,7 +7,7 @@ codeunit 72050004 "Ex. Jnl.-Post Batch"
   trigger OnRun();
   begin
     ExJnlLine.COPY(Rec);
-    Code;
+    Code4;
     Rec := ExJnlLine;
   end;
 
@@ -49,7 +49,7 @@ codeunit 72050004 "Ex. Jnl.-Post Batch"
     PostingNoSeriesNo : Integer;
     "0DF" : DateFormula;
 
-  LOCAL PROCEDURE "Code"();
+  LOCAL PROCEDURE Code4();
   var
     UpdateAnalysisView : Codeunit 410;
   begin

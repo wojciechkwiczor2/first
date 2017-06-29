@@ -20,7 +20,7 @@ table 72050030 "Example Product Price"
 
   keys
   {
-    key(1;Key1;"Product No.","Person No.")
+    key(Key1;"Product No.","Person No.")
     {
       Clustered=true;
     }

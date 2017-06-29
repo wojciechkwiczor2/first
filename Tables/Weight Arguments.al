@@ -12,7 +12,7 @@ table 72050098 "Weight Arguments"
 
   keys
   {
-    key(1;Key1;Weight)
+    key(Key1;Weight)
     {
       Clustered=true;
     }

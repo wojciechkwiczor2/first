@@ -5,8 +5,6 @@
             "type": "al",
             "request": "publish",
             "name": "Publish",
-            "projectRoot": "${workspaceRoot}",
-            "packageFileName": "${command:resolvePackageFileName}",                                                                        
             "server": "http://localhost",
             "serverInstance": "Navision_main",                
             "tenant": "default",

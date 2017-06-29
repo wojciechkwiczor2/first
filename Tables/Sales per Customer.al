@@ -35,7 +35,7 @@ table 72050001 "Sales per Customer"
 
   keys
   {
-    key(1;Key1;"Entry No.")
+    key(Key1;"Entry No.")
     {
       Clustered=true;
     }

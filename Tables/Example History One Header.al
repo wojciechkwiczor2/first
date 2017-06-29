@@ -32,7 +32,7 @@ table 72050008 "Example History One Header"
 
   keys
   {
-    key(1;Key1;"No.")
+    key(Key1;"No.")
     {
       Clustered=true;
     }

@@ -53,7 +53,7 @@ table 72050003 "Example Document Header"
 
   keys
   {
-    key(1;Key1;"No.")
+    key(Key1;"No.")
     {
       Clustered=true;
     }

@@ -4,6 +4,6 @@ tableextension 72051234 CustomerFormatAddress extends Customer
     var
         FormAddr : Codeunit "Format Address";
     begin
-        //FormAddr.Customer(AddrArray, Rec);
+        FormAddr.Customer(AddrArray, Rec);
     end;
 }

@@ -50,14 +50,14 @@ table 72050015 "Example Register"
 
   keys
   {
-    key(1;Key1;"No.")
+    key(Key1;"No.")
     {
       Clustered=true;
     }
-    key(2;Key2;"Creation Date")
+    key(Key2;"Creation Date")
     {
     }
-    key(3;Key3;"Source Code","Journal Batch Name","Creation Date")
+    key(Key3;"Source Code","Journal Batch Name","Creation Date")
     {
     }
   }

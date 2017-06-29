@@ -38,7 +38,7 @@ page 72050012 "Example Journal Templates"
         }
         field("Page ID";"Page ID")
         {
-          LookupPageID=Objects;
+//          LookupPageID=Objects;
           Visible=false;
         }
         field("Page Caption";"Page Caption")
@@ -48,7 +48,7 @@ page 72050012 "Example Journal Templates"
         }
         field("Test Report ID";"Test Report ID")
         {
-          LookupPageID=Objects;
+//          LookupPageID=Objects;
           Visible=false;
         }
         field("Test Report Caption";"Test Report Caption")
@@ -58,7 +58,7 @@ page 72050012 "Example Journal Templates"
         }
         field("Posting Report ID";"Posting Report ID")
         {
-          LookupPageID=Objects;
+//          LookupPageID=Objects;
           Visible=false;
         }
         field("Posting Report Caption";"Posting Report Caption")

@@ -54,7 +54,7 @@ table 72050020 "Example Product"
 
   keys
   {
-    key(1;Key1;"No.")
+    key(Key1;"No.")
     {
       Clustered=true;
     }

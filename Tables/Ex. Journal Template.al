@@ -165,7 +165,7 @@ table 72050012 "Ex. Journal Template"
 
   keys
   {
-    key(1;Key1;Name)
+    key(Key1;Name)
     {
       Clustered=true;
     }

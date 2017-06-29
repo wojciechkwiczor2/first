@@ -28,7 +28,7 @@ table 72050011 "Example Entry"
                       ESM='Consumo,Venta',
                       FRC='Utilisation,Vente',
                       ENC='Usage,Sale';
-      OptionString=Usage,Sale;
+      OptionMembers=Usage,Sale;
     }
     field(3;"Document No.";Code[20])
     {
@@ -177,25 +177,25 @@ table 72050011 "Example Entry"
 
   keys
   {
-    key(1;Key1;"Entry No.")
+    key(Key1;"Entry No.")
     {
       Clustered=true;
     }
-    key(2;Key2;"Example Person No.","Posting Date")
+    key(Key2;"Example Person No.","Posting Date")
     {
     }
-    key(3;Key3;"Entry Type","Example Person No.","Posting Date")
+    key(Key3;"Entry Type","Example Person No.","Posting Date")
     {
       SumIndexFields=Quantity;
     }
-    key(4;Key4;"Document No.","Posting Date")
+    key(Key4;"Document No.","Posting Date")
     {
     }
   }
 
   fieldgroups
   {
-    fieldgroup(1;DropDown;"Entry No.",Description,"Entry Type","Document No.","Posting Date")
+    fieldgroup(DropDown;"Entry No.",Description,"Entry Type","Document No.","Posting Date")
     {
     }
   }

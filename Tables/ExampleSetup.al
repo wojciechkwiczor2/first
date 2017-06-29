@@ -31,7 +31,7 @@ table 72050000 ExampleSetup
 
     keys
     {
-        key(1;PK;"Primary Key")
+        key(PK;"Primary Key")
         {
             Clustered = true;
         }

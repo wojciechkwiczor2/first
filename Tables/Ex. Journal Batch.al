@@ -81,7 +81,7 @@ table 72050014 "Ex. Journal Batch"
 
   keys
   {
-    key(1;Key1;"Journal Template Name",Name)
+    key(Key1;"Journal Template Name",Name)
     {
       Clustered=true;
     }

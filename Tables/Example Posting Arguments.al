@@ -18,7 +18,7 @@ table 72050002 "Example Posting Arguments"
 
   keys
   {
-    key(1;Key1;"Replace Posting Date")
+    key(Key1;"Replace Posting Date")
     {
       Clustered=true;
     }

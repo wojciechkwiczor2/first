@@ -23,7 +23,7 @@ table 72050019 "Example History Two Line"
 
   keys
   {
-    key(1;Key1;"Document No.","Line No.")
+    key(Key1;"Document No.","Line No.")
     {
       Clustered=true;
     }

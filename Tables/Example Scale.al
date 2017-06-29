@@ -19,7 +19,7 @@ table 72050025 "Example Scale"
 
   keys
   {
-    key(1;Key1;"Code")
+    key(Key1;"Code")
     {
       Clustered=true;
     }

@@ -17,7 +17,7 @@ table 72050006 "Example Cue"
 
   keys
   {
-    key(1;Key1;"Primary Key")
+    key(Key1;"Primary Key")
     {
       Clustered=true;
     }

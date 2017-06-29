@@ -37,17 +37,17 @@ page 72050015 "Ex. Journal Template List"
         }
         field("Page ID";"Page ID")
         {
-          LookupPageID=Objects;
+//          LookupPageID=Objects;
           Visible=false;
         }
         field("Test Report ID";"Test Report ID")
         {
-          LookupPageID=Objects;
+//          LookupPageID=Objects;
           Visible=false;
         }
         field("Posting Report ID";"Posting Report ID")
         {
-          LookupPageID=Objects;
+//          LookupPageID=Objects;
           Visible=false;
         }
         field("Force Posting Report";"Force Posting Report")

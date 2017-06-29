@@ -72,7 +72,7 @@ table 72050010 "Example Person"
     {
       CaptionML=ENU='Blocked';
       OptionCaptionML=ENU=' ,Ship,Invoice,All';
-      OptionString=" ",Ship,Invoice,All;
+      OptionMembers=" ",Ship,Invoice,All;
     }
     field(91;"Post Code";Code[20])
     {
@@ -97,7 +97,7 @@ table 72050010 "Example Person"
 
   keys
   {
-    key(1;Key1;"No.")
+    key(Key1;"No.")
     {
       Clustered=true;
     }

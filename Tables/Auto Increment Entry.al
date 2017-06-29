@@ -14,7 +14,7 @@ table 72078537 "Auto Increment Entry"
 
   keys
   {
-    key(1;Key1;"Entry No.")
+    key(Key1;"Entry No.")
     {
       Clustered=true;
     }

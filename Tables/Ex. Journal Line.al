@@ -34,7 +34,7 @@ table 72050013 "Ex. Journal Line"
                       ESM='Consumo,Venta',
                       FRC='Utilisation,Vente',
                       ENC='Usage,Sale';
-      OptionString=Usage,Sale;
+      OptionMembers=Usage,Sale;
     }
     field(4;"Document No.";Code[20])
     {
@@ -144,7 +144,7 @@ table 72050013 "Ex. Journal Line"
                       ESM=',Fija,Variable',
                       FRC=',Fixe,Variable',
                       ENC=',Fixed,Variable';
-      OptionString=,"Fixed",Variable;
+      OptionMembers=,"Fixed",Variable;
     }
     field(26;"Expiration Date";Date)
     {
@@ -224,7 +224,7 @@ table 72050013 "Ex. Journal Line"
 
   keys
   {
-    key(1;Key1;"Journal Template Name","Journal Batch Name","Line No.")
+    key(Key1;"Journal Template Name","Journal Batch Name","Line No.")
     {
       Clustered=true;
     }

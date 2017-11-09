@@ -1,4 +1,4 @@
-codeunit 72050017 "Get Weight From Brandx"
+codeunit 50017 "Get Weight From Brandx"
 {
   // version Exercise 4
 
@@ -7,10 +7,10 @@ codeunit 72050017 "Get Weight From Brandx"
   begin
   end;
 
-  [EventSubscriber(ObjectType::Codeunit, 72050012, 'GetWeightEvent', '', false, false)]
-  LOCAL PROCEDURE GetWightFromPhilips(VAR Rec : Variant;VAR WeightArguments : Record 72050098;VAR Handled : Boolean);
+  [EventSubscriber(ObjectType::Codeunit, 50012, 'GetWeightEvent', '', false, false)]
+  LOCAL PROCEDURE GetWightFromPhilips(VAR Rec : Variant;VAR WeightArguments : Record 50098;VAR Handled : Boolean);
   var
-    GetWeightFromScaleFacade : Codeunit 72050012;
+    GetWeightFromScaleFacade : Codeunit 50012;
   begin
     IF GetWeightFromScaleFacade.GetCodeunitIDFromScaleSetup <> CODEUNIT::"Get Weight From Brandx" THEN
       EXIT;

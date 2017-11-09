@@ -1,4 +1,4 @@
-report 72050002 "Example Register"
+report 50002 "Example Register"
 {
   // version Exercise 3
 

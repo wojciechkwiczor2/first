@@ -1,4 +1,4 @@
-page 72050015 "Ex. Journal Template List"
+page 50015 "Ex. Journal Template List"
 {
   // version Exercise 3
 

@@ -1,4 +1,4 @@
-codeunit 72050010 ExJnlManagement
+codeunit 50010 ExJnlManagement
 {
   // version Exercise 3
 
@@ -16,9 +16,9 @@ codeunit 72050010 ExJnlManagement
     OldExNo : Code[20];
     OpenFromBatch : Boolean;
 
-  PROCEDURE TemplateSelection(PageID : Integer;RecurringJnl : Boolean;VAR ExJnlLine : Record 72050013;VAR JnlSelected : Boolean);
+  PROCEDURE TemplateSelection(PageID : Integer;RecurringJnl : Boolean;VAR ExJnlLine : Record 50013;VAR JnlSelected : Boolean);
   var
-    ExJnlTemplate : Record 72050012;
+    ExJnlTemplate : Record 50012;
   begin
     JnlSelected := TRUE;
 
@@ -58,10 +58,10 @@ codeunit 72050010 ExJnlManagement
     END;
   end;
 
-  PROCEDURE TemplateSelectionFromBatch(VAR ExJnlBatch : Record 72050014);
+  PROCEDURE TemplateSelectionFromBatch(VAR ExJnlBatch : Record 50014);
   var
-    ExJnlLine : Record 72050013;
-    ExJnlTemplate : Record 72050012;
+    ExJnlLine : Record 50013;
+    ExJnlTemplate : Record 50012;
   begin
     OpenFromBatch := TRUE;
     ExJnlTemplate.GET(ExJnlBatch."Journal Template Name");
@@ -77,7 +77,7 @@ codeunit 72050010 ExJnlManagement
     PAGE.RUN(ExJnlTemplate."Page ID",ExJnlLine);
   end;
 
-  PROCEDURE OpenJnl(VAR CurrentJnlBatchName : Code[10];VAR ExJnlLine : Record 72050013);
+  PROCEDURE OpenJnl(VAR CurrentJnlBatchName : Code[10];VAR ExJnlLine : Record 50013);
   begin
     CheckTemplateName(ExJnlLine.GETRANGEMAX("Journal Template Name"),CurrentJnlBatchName);
     ExJnlLine.FILTERGROUP := 2;
@@ -85,10 +85,10 @@ codeunit 72050010 ExJnlManagement
     ExJnlLine.FILTERGROUP := 0;
   end;
 
-  PROCEDURE OpenJnlBatch(VAR ExJnlBatch : Record 72050014);
+  PROCEDURE OpenJnlBatch(VAR ExJnlBatch : Record 50014);
   var
-    ExJnlTemplate : Record 72050012;
-    ExJnlLine : Record 72050013;
+    ExJnlTemplate : Record 50012;
+    ExJnlLine : Record 50013;
     JnlSelected : Boolean;
   begin
     IF ExJnlBatch.GETFILTER("Journal Template Name") <> '' THEN
@@ -134,7 +134,7 @@ codeunit 72050010 ExJnlManagement
 
   PROCEDURE CheckTemplateName(CurrentJnlTemplateName : Code[10];VAR CurrentJnlBatchName : Code[10]);
   var
-    ExJnlBatch : Record 72050014;
+    ExJnlBatch : Record 50014;
   begin
     ExJnlBatch.SETRANGE("Journal Template Name",CurrentJnlTemplateName);
     IF NOT ExJnlBatch.GET(CurrentJnlTemplateName,CurrentJnlBatchName) THEN BEGIN
@@ -151,14 +151,14 @@ codeunit 72050010 ExJnlManagement
     END;
   end;
 
-  PROCEDURE CheckName(CurrentJnlBatchName : Code[10];VAR ExJnlLine : Record 72050013);
+  PROCEDURE CheckName(CurrentJnlBatchName : Code[10];VAR ExJnlLine : Record 50013);
   var
-    ExJnlBatch : Record 72050014;
+    ExJnlBatch : Record 50014;
   begin
     ExJnlBatch.GET(ExJnlLine.GETRANGEMAX("Journal Template Name"),CurrentJnlBatchName);
   end;
 
-  PROCEDURE SetName(CurrentJnlBatchName : Code[10];VAR ExJnlLine : Record 72050013);
+  PROCEDURE SetName(CurrentJnlBatchName : Code[10];VAR ExJnlLine : Record 50013);
   begin
     ExJnlLine.FILTERGROUP := 2;
     ExJnlLine.SETRANGE("Journal Batch Name",CurrentJnlBatchName);
@@ -166,9 +166,9 @@ codeunit 72050010 ExJnlManagement
     IF ExJnlLine.FIND('-') THEN;
   end;
 
-  PROCEDURE LookupName(VAR CurrentJnlBatchName : Code[10];VAR ExJnlLine : Record 72050013) : Boolean;
+  PROCEDURE LookupName(VAR CurrentJnlBatchName : Code[10];VAR ExJnlLine : Record 50013) : Boolean;
   var
-    ExJnlBatch : Record 72050014;
+    ExJnlBatch : Record 50014;
   begin
     COMMIT;
     ExJnlBatch."Journal Template Name" := ExJnlLine.GETRANGEMAX("Journal Template Name");
@@ -184,7 +184,7 @@ codeunit 72050010 ExJnlManagement
 
   PROCEDURE GetEx(ExNo : Code[20];VAR ExName : Text[50]);
   var
-    ExamplePerson : Record 72050010;
+    ExamplePerson : Record 50010;
   begin
     IF ExNo <> OldExNo THEN BEGIN
       ExName := '';

@@ -1,8 +1,8 @@
-table 72050025 "Example Scale"
+table 50025 "Example Scale"
 {
   // version Exercise 4
 
-  LookupPageID=72050025;
+  LookupPageID=50025;
 
   fields
   {

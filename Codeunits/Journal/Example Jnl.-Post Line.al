@@ -2,7 +2,7 @@ codeunit 72060003 "Example Jnl.-Post Line"
 {
   // version Exercise 3
 
-  TableNo=72050013;
+  TableNo=50013;
 
   trigger OnRun();
   begin
@@ -16,12 +16,12 @@ codeunit 72060003 "Example Jnl.-Post Line"
   end;
 
   var
-    ExReg : Record 72050015;
+    ExReg : Record 50015;
     NextEntryNo : Integer;
 
-  LOCAL PROCEDURE TestNear(ExJnlLine : Record 72050013) : Boolean;
+  LOCAL PROCEDURE TestNear(ExJnlLine : Record 50013) : Boolean;
   var
-    ExJnlCheckLine : Codeunit 72050002;
+    ExJnlCheckLine : Codeunit 50002;
   begin
     WITH ExJnlLine DO
       IF EmptyLine THEN
@@ -30,16 +30,16 @@ codeunit 72060003 "Example Jnl.-Post Line"
     EXIT(TRUE);
   end;
 
-  LOCAL PROCEDURE TestFar(ExJnlLine : Record 72050013);
+  LOCAL PROCEDURE TestFar(ExJnlLine : Record 50013);
   var
-    ExJnlCheckLine : Codeunit 72050002;
+    ExJnlCheckLine : Codeunit 50002;
   begin
     ExJnlCheckLine.RunCheck(ExJnlLine);
   end;
 
   LOCAL PROCEDURE IsolateTransactionAndFindLastEntryNumber();
   var
-    ExLedgEntry : Record 72050011;
+    ExLedgEntry : Record 50011;
   begin
     IF NextEntryNo = 0 THEN BEGIN
       ExLedgEntry.LOCKTABLE;
@@ -69,9 +69,9 @@ codeunit 72060003 "Example Jnl.-Post Line"
     ExReg.MODIFY;
   end;
 
-  LOCAL PROCEDURE CreateEntry(VAR ExJnlLine : Record 72050013);
+  LOCAL PROCEDURE CreateEntry(VAR ExJnlLine : Record 50013);
   var
-    ExLedgEntry : Record 72050011;
+    ExLedgEntry : Record 50011;
   begin
     WITH ExJnlLine DO BEGIN
       IF "Document Date" = 0D THEN

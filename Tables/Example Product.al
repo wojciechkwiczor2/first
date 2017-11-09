@@ -1,4 +1,4 @@
-table 72050020 "Example Product"
+table 50020 "Example Product"
 {
   // version Exercise 2
 
@@ -74,7 +74,7 @@ table 72050020 "Example Product"
   end;
 
   var
-    ExampleSetup : Record 72050000;
+    ExampleSetup : Record 50000;
     NoSeriesMgt : Codeunit 396;
 
   PROCEDURE AssistEdit() : Boolean;
@@ -89,7 +89,7 @@ table 72050020 "Example Product"
 
   PROCEDURE GetSalesPrice(PersonNo : Code[20]) : Decimal;
   var
-    ExampleProductPriceMgt : Codeunit 72050020;
+    ExampleProductPriceMgt : Codeunit 50020;
   begin
     WITH ExampleProductPriceMgt DO
       EXIT(GetSalesPrice(Rec, PersonNo));

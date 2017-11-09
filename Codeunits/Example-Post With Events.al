@@ -2,7 +2,7 @@ codeunit 72060000 "Example-Post With Events"
 {
   // version Exercise 4
 
-  TableNo=72050003;
+  TableNo=50003;
 
   trigger OnRun();
   begin
@@ -17,9 +17,9 @@ codeunit 72060000 "Example-Post With Events"
   end;
 
   var
-    Arguments : Record 72050002;
+    Arguments : Record 50002;
 
-  LOCAL PROCEDURE ThrowErrorIfNoSelection(VAR ExDoc : Record 72050003);
+  LOCAL PROCEDURE ThrowErrorIfNoSelection(VAR ExDoc : Record 50003);
   var
     NoSelectionError : TextConst ENU='Please enter "Yes" in %1 and/or %2.';
   begin
@@ -30,7 +30,7 @@ codeunit 72060000 "Example-Post With Events"
           FIELDCAPTION(One), FIELDCAPTION(Two));
   end;
 
-  LOCAL PROCEDURE TestNear(VAR ExDoc : Record 72050003);
+  LOCAL PROCEDURE TestNear(VAR ExDoc : Record 50003);
   begin
     WITH ExDoc DO BEGIN
       TESTFIELD("Example Person No.");
@@ -39,7 +39,7 @@ codeunit 72060000 "Example-Post With Events"
     OnAfterTestNear;
   end;
 
-  LOCAL PROCEDURE TestFar(VAR ExDoc : Record 72050003);
+  LOCAL PROCEDURE TestFar(VAR ExDoc : Record 50003);
   var
     GenJnlCheckLine : Codeunit 11;
     DateNotAllowed : TextConst ENU='is not within your range of allowed posting dates.';
@@ -48,7 +48,7 @@ codeunit 72060000 "Example-Post With Events"
       ExDoc.FIELDERROR("Posting Date", DateNotAllowed);
   end;
 
-  LOCAL PROCEDURE ReplaceDatesIfAttrExists(VAR ExDoc : Record 72050003);
+  LOCAL PROCEDURE ReplaceDatesIfAttrExists(VAR ExDoc : Record 50003);
   begin
     WITH Arguments DO BEGIN
       IF (NOT "Replace Posting Date") AND (NOT "Replace Document Date") THEN
@@ -65,11 +65,11 @@ codeunit 72060000 "Example-Post With Events"
     END;
   end;
 
-  LOCAL PROCEDURE PostExampleOne(VAR ExDoc : Record 72050003);
+  LOCAL PROCEDURE PostExampleOne(VAR ExDoc : Record 50003);
   var
-    ExampleDocumentLine : Record 72050004;
-    ExampleHistoryOne : Record 72050008;
-    ExampleHistoryOneLine : Record 72050009;
+    ExampleDocumentLine : Record 50004;
+    ExampleHistoryOne : Record 50008;
+    ExampleHistoryOneLine : Record 50009;
   begin
     WITH ExampleHistoryOne DO BEGIN
       TRANSFERFIELDS(ExDoc);
@@ -84,11 +84,11 @@ codeunit 72060000 "Example-Post With Events"
     END;
   end;
 
-  LOCAL PROCEDURE PostExampleTwo(VAR ExDoc : Record 72050003);
+  LOCAL PROCEDURE PostExampleTwo(VAR ExDoc : Record 50003);
   var
-    ExampleHistoryTwo : Record 72050018;
-    ExampleHistoryTwoLine : Record 72050019;
-    ExampleDocumentLine : Record 72050004;
+    ExampleHistoryTwo : Record 50018;
+    ExampleHistoryTwoLine : Record 50019;
+    ExampleDocumentLine : Record 50004;
   begin
     WITH ExampleHistoryTwo DO BEGIN
       TRANSFERFIELDS(ExDoc);
@@ -104,23 +104,23 @@ codeunit 72060000 "Example-Post With Events"
     END;
   end;
 
-  LOCAL PROCEDURE DeleteExampeDocument(VAR ExDoc : Record 72050003);
+  LOCAL PROCEDURE DeleteExampeDocument(VAR ExDoc : Record 50003);
   begin
     OnBeforeDelete;
     WITH ExDoc DO
       DELETE;
   end;
 
-  PROCEDURE SetArguments(VAR ArgumentsIn : Record 72050002);
+  PROCEDURE SetArguments(VAR ArgumentsIn : Record 50002);
   begin
     Arguments := ArgumentsIn;
   end;
 
-  LOCAL PROCEDURE PostExJnlLine(ExDoc : Record 72050003);
+  LOCAL PROCEDURE PostExJnlLine(ExDoc : Record 50003);
   var
-    ExampleDocumentLine : Record 72050004;
-    ExJnlLine : Record 72050013;
-    ExJnlPostLine : Codeunit 72050003;
+    ExampleDocumentLine : Record 50004;
+    ExJnlLine : Record 50013;
+    ExJnlPostLine : Codeunit 50003;
   begin
     WITH ExDoc DO BEGIN
       ExampleDocumentLine.SETRANGE("Document No.", "No.");
@@ -137,12 +137,12 @@ codeunit 72060000 "Example-Post With Events"
     END;
   end;
 
-  [Business(false)]
+  [BusinessEvent(false)]
   LOCAL PROCEDURE OnAfterTestNear();
   begin
   end;
 
-  [Business(false)]
+  [BusinessEvent(false)]
   LOCAL PROCEDURE OnBeforeDelete();
   begin
   end;

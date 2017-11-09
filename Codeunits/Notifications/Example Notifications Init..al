@@ -1,4 +1,4 @@
-codeunit 72050112 "Example Notifications Init."
+codeunit 50112 "Example Notifications Init."
 {
   // version Exercise 2
 

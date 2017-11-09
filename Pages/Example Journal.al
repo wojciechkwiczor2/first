@@ -1,4 +1,4 @@
-page 72050013 "Example Journal"
+page 50013 "Example Journal"
 {
   // version Exercise 3
 
@@ -272,7 +272,7 @@ page 72050013 "Example Journal"
           Promoted=false;
           //The properties 'PromotedCategory' and 'PromotedIsBig' can only be set if the property 'Promoted' is set to 'true'
           //PromotedCategory=Process;
-          RunObject=Page 72050014;
+          RunObject=Page 50014;
           RunPageLink="Example Person No."=FIELD("Example Person No.");
           RunPageView=SORTING("Example Person No.");
           ShortCutKey='Ctrl+F7';
@@ -377,7 +377,7 @@ page 72050013 "Example Journal"
   end;
 
   var
-    ExJnlManagement : Codeunit 72050010;
+    ExJnlManagement : Codeunit 50010;
     ReportPrint : Codeunit 228;
     CurrentJnlBatchName : Code[10];
     ExName : Text[50];

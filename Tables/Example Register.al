@@ -1,10 +1,10 @@
-table 72050015 "Example Register"
+table 50015 "Example Register"
 {
   // version Exercise 3
 
   CaptionML=ENU='Example Register';
-  DrillDownPageID=72050017;
-  LookupPageID=72050017;
+  DrillDownPageID=50017;
+  LookupPageID=50017;
 
   fields
   {

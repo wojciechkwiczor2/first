@@ -1,4 +1,4 @@
-page 72050025 "Example Scales"
+page 50025 "Example Scales"
 {
   // version Exercise 4
 

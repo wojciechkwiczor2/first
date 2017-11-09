@@ -1,4 +1,4 @@
-table 72050098 "Weight Arguments"
+table 50098 "Weight Arguments"
 {
   // version Exercise 4
 

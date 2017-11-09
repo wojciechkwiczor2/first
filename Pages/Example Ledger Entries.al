@@ -1,4 +1,4 @@
-page 72050014 "Example Ledger Entries"
+page 50014 "Example Ledger Entries"
 {
   // version Exercise 3
 

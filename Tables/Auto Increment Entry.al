@@ -1,4 +1,4 @@
-table 72078537 "Auto Increment Entry"
+table 78537 "Auto Increment Entry"
 {
 
   fields

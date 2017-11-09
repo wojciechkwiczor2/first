@@ -2,7 +2,7 @@ codeunit 73050003 "Exampl Jnl.-Post Line"
 {
   // version Exercise 3
 
-  TableNo=72050013;
+  TableNo=50013;
 
   trigger OnRun();
   begin
@@ -12,8 +12,8 @@ codeunit 73050003 "Exampl Jnl.-Post Line"
   end;
 
   var
-    ExamplePerson : Record 72050010;
-    ExReg : Record 72050015;
+    ExamplePerson : Record 50010;
+    ExReg : Record 50015;
     EntryNo : Integer;
 
     local procedure TestNear(ExJnlLine : Record "Ex. Journal Line");
@@ -25,7 +25,7 @@ codeunit 73050003 "Exampl Jnl.-Post Line"
     end;
     local procedure TestFar(ExJnlLine : Record "Ex. Journal Line");
     var
-        ExJnlCheckLine : Codeunit 72050002;
+        ExJnlCheckLine : Codeunit 50002;
 
     begin
       ExJnlCheckLine.RunCheck(ExJnlLine);
@@ -33,7 +33,7 @@ codeunit 73050003 "Exampl Jnl.-Post Line"
     end;
     local procedure DoIt(ExJnlLine : Record "Ex. Journal Line");
     var
-        ExLedgEntry : Record 72050011;
+        ExLedgEntry : Record 50011;
 
     begin
           WITH ExJnlLine DO begin

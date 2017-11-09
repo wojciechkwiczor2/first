@@ -1,4 +1,4 @@
-codeunit 72050031 "Ex. Jnl.-Post Line-Hook"
+codeunit 50031 "Ex. Jnl.-Post Line-Hook"
 {
   // version Exercise 4
 

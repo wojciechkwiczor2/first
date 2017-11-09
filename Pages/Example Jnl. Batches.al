@@ -1,4 +1,4 @@
-page 72050016 "Example Jnl. Batches"
+page 50016 "Example Jnl. Batches"
 {
   // version Exercise 3
 
@@ -98,7 +98,7 @@ page 72050016 "Example Jnl. Batches"
           Promoted=true;
           PromotedCategory=Process;
           PromotedIsBig=true;
-          RunObject=Codeunit 72050007;
+          RunObject=Codeunit 50007;
           ShortCutKey='F9';
         }
         action("Post and &Print")
@@ -111,7 +111,7 @@ page 72050016 "Example Jnl. Batches"
           Promoted=true;
           PromotedCategory=Process;
           PromotedIsBig=true;
-          RunObject=Codeunit 72050008;
+          RunObject=Codeunit 50008;
           ShortCutKey='Shift+F9';
         }
       }
@@ -135,11 +135,11 @@ page 72050016 "Example Jnl. Batches"
 
   var
     ReportPrint : Codeunit 228;
-    ExJnlMgt : Codeunit 72050010;
+    ExJnlMgt : Codeunit 50010;
 
   LOCAL PROCEDURE DataCaption() : Text[250];
   var
-    ResJnlTemplate : Record 72050012;
+    ResJnlTemplate : Record 50012;
   begin
     IF NOT CurrPage.LOOKUPMODE THEN
       IF GETFILTER("Journal Template Name") <> '' THEN

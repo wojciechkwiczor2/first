@@ -1,4 +1,4 @@
-table 72050012 "Ex. Journal Template"
+table 50012 "Ex. Journal Template"
 {
   // version Exercise 3
 
@@ -6,8 +6,8 @@ table 72050012 "Ex. Journal Template"
             ESM='Libro del diario recurso',
             FRC='Modèle journal ressources',
             ENC='Ex. Journal Template';
-  DrillDownPageID=72050015;
-  LookupPageID=72050015;
+  DrillDownPageID=50015;
+  LookupPageID=50015;
 
   fields
   {
@@ -95,7 +95,7 @@ table 72050012 "Ex. Journal Template"
       trigger OnValidate();
       begin
         "Page ID" := PAGE::"Example Journal";
-        //"Test Report ID" := REPORT::Report7205002;
+        //"Test Report ID" := REPORT::Report5002;
         "Posting Report ID" := REPORT::"Example Register";
         SourceCodeSetup.GET;
         "Source Code" := SourceCodeSetup."Example Journal";
@@ -191,8 +191,8 @@ table 72050012 "Ex. Journal Template"
   var
     Text000 : TextConst ENU='Only the %1 field can be filled in on recurring journals.',ESM='Sólo se debe completar el campo %1 en los diarios periódicos.',FRC='Seul le champ %1 peut être rempli sur les journaux récurrents.',ENC='Only the %1 field can be filled in on recurring journals.';
     Text001 : TextConst ENU='must not be %1',ESM='No puede ser %1.',FRC='ne doit pas être %1',ENC='must not be %1';
-    ExJnlBatch : Record 72050014;
-    ExJnlLine : Record 72050013;
+    ExJnlBatch : Record 50014;
+    ExJnlLine : Record 50013;
     SourceCodeSetup : Record 242;
 }
 

@@ -1,4 +1,4 @@
-tableextension 72050242 SourceCodeSetup extends "Source Code Setup"
+tableextension 50242 SourceCodeSetup extends "Source Code Setup"
 {
     fields
     {

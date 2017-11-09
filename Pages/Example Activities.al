@@ -1,4 +1,4 @@
-page 72050006 "Example Activities"
+page 50006 "Example Activities"
 {
   // version Exercise 4
 

@@ -1,4 +1,4 @@
-table 72050013 "Ex. Journal Line"
+table 50013 "Ex. Journal Line"
 {
   // version Exercise 3
 
@@ -245,10 +245,10 @@ table 72050013 "Ex. Journal Line"
   end;
 
   var
-    ExJnlTemplate : Record 72050012;
-    ExJnlBatch : Record 72050014;
-    ExJnlLine : Record 72050013;
-    ExamplePerson : Record 72050010;
+    ExJnlTemplate : Record 50012;
+    ExJnlBatch : Record 50014;
+    ExJnlLine : Record 50013;
+    ExamplePerson : Record 50010;
     GLSetup : Record 98;
     NoSeriesMgt : Codeunit 396;
     DimMgt : Codeunit 408;
@@ -259,7 +259,7 @@ table 72050013 "Ex. Journal Line"
     EXIT(("Example Person No." = '') AND ("Example Product No." = '') AND (Quantity = 0));
   end;
 
-  PROCEDURE SetUpNewLine(LastExJnlLine : Record 72050013);
+  PROCEDURE SetUpNewLine(LastExJnlLine : Record 50013);
   begin
     ExJnlTemplate.GET("Journal Template Name");
     ExJnlBatch.GET("Journal Template Name","Journal Batch Name");

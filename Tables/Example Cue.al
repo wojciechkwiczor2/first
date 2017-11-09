@@ -1,4 +1,4 @@
-table 72050006 "Example Cue"
+table 50006 "Example Cue"
 {
   // version Exercise 4
 

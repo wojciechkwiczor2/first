@@ -1,4 +1,4 @@
-codeunit 72050020 "Example Product Price Mgt."
+codeunit 50020 "Example Product Price Mgt."
 {
   // version Exercise 2
 

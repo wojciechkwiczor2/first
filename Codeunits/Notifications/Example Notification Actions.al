@@ -1,4 +1,4 @@
-codeunit 72050111 "Example Notification Actions"
+codeunit 50111 "Example Notification Actions"
 {
   // version Exercise 1
 

@@ -1,4 +1,4 @@
-table 72050010 "Example Person"
+table 50010 "Example Person"
 {
   // version Exercise 2
 
@@ -109,7 +109,7 @@ table 72050010 "Example Person"
 
   trigger OnInsert();
   var
-    ExampleDocumentNoVisibility : Codeunit 72051400;
+    ExampleDocumentNoVisibility : Codeunit 51400;
   begin
     IF "No." = '' THEN
       IF ExampleDocumentNoVisibility.ExamplePersonNoSeriesIsDefault THEN BEGIN

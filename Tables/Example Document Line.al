@@ -1,4 +1,4 @@
-table 72050004 "Example Document Line"
+table 50004 "Example Document Line"
 {
   // version Exercise 4
 

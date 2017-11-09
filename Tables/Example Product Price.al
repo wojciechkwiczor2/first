@@ -1,4 +1,4 @@
-table 72050030 "Example Product Price"
+table 50030 "Example Product Price"
 {
   // version Exercise 2
 

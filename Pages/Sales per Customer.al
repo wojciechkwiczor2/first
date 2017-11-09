@@ -1,4 +1,4 @@
-page 72050001 "Sales per Customer"
+page 50001 "Sales per Customer"
 {
   // version Exercise 4
 
@@ -48,7 +48,7 @@ page 72050001 "Sales per Customer"
 
   PROCEDURE InitPageBasedOnQuery();
   var
-    ExQuery : Query 72050000;
+    ExQuery : Query 50000;
     NextEntryNo : Integer;
   begin
     ExQuery.OPEN;

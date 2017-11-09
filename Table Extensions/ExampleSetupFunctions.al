@@ -1,4 +1,4 @@
-tableextension 72050005 ExampleSetup extends ExampleSetup
+tableextension 50005 ExampleSetup extends ExampleSetup
 {
     procedure InitSetupRecord();
     begin

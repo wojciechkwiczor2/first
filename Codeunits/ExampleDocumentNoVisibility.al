@@ -1,4 +1,4 @@
-codeunit 72051400 ExampleDocumentNoVisibility
+codeunit 51400 ExampleDocumentNoVisibility
 {
   // version Exercise 1
 

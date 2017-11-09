@@ -1,8 +1,8 @@
-codeunit 72050003 "Ex. Jnl.-Post Line"
+codeunit 50003 "Ex. Jnl.-Post Line"
 {
   // version Exercise 3
 
-  TableNo=72050013;
+  TableNo=50013;
 
   trigger OnRun();
   begin
@@ -12,20 +12,20 @@ codeunit 72050003 "Ex. Jnl.-Post Line"
 
   var
     GLSetup : Record 98;
-    ExJnlLine : Record 72050013;
-    ExLedgEntry : Record 72050011;
-    ExamplePerson : Record 72050010;
-    ExReg : Record 72050015;
-    ExJnlCheckLine : Codeunit 72050002;
+    ExJnlLine : Record 50013;
+    ExLedgEntry : Record 50011;
+    ExamplePerson : Record 50010;
+    ExReg : Record 50015;
+    ExJnlCheckLine : Codeunit 50002;
     NextEntryNo : Integer;
     GLSetupRead : Boolean;
 
-  PROCEDURE GetExReg(VAR NewExReg : Record 72050015);
+  PROCEDURE GetExReg(VAR NewExReg : Record 50015);
   begin
     NewExReg := ExReg;
   end;
 
-  PROCEDURE RunWithCheck(VAR ExJnlLine2 : Record 72050013);
+  PROCEDURE RunWithCheck(VAR ExJnlLine2 : Record 50013);
   begin
     ExJnlLine.COPY(ExJnlLine2);
     Code;

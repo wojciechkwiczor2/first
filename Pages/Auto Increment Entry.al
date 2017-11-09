@@ -1,4 +1,4 @@
-page 72078537 "Auto Increment Entry"
+page 78537 "Auto Increment Entry"
 {
   PageType=List;
   SourceTable="Auto Increment Entry";

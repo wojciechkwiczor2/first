@@ -1,4 +1,4 @@
-page 72050017 "Example Registers"
+page 50017 "Example Registers"
 {
   // version Exercise 3
 
@@ -70,7 +70,7 @@ page 72050017 "Example Registers"
           Promoted=true;
           PromotedCategory=Process;
           PromotedIsBig=true;
-          RunObject=Codeunit 72050009;
+          RunObject=Codeunit 50009;
         }
       }
     }

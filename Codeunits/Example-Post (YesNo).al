@@ -1,8 +1,8 @@
-codeunit 72050001 "Example-Post (Yes/No)"
+codeunit 50001 "Example-Post (Yes/No)"
 {
   // version Exercise 4
 
-  TableNo=72050003;
+  TableNo=50003;
 
   trigger OnRun();
   begin
@@ -10,7 +10,7 @@ codeunit 72050001 "Example-Post (Yes/No)"
       PostTheDocument(Rec)
   end;
 
-  PROCEDURE AskDocumentType(VAR ExDoc : Record 72050003) : Boolean;
+  PROCEDURE AskDocumentType(VAR ExDoc : Record 50003) : Boolean;
   var
     DocumentTypeStrMenu : TextConst ENU='&One,&Two,One &and Two';
     Selection : Integer;
@@ -27,9 +27,9 @@ codeunit 72050001 "Example-Post (Yes/No)"
     EXIT(TRUE);
   end;
 
-  PROCEDURE PostTheDocument(VAR ExDoc : Record 72050003);
+  PROCEDURE PostTheDocument(VAR ExDoc : Record 50003);
   var
-    ExamplePost : Codeunit 72050000;
+    ExamplePost : Codeunit 50000;
   begin
     ExamplePost.RUN(ExDoc);
   end;

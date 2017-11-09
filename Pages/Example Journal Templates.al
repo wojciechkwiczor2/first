@@ -1,4 +1,4 @@
-page 72050012 "Example Journal Templates"
+page 50012 "Example Journal Templates"
 {
   // version Exercise 3
 
@@ -103,7 +103,7 @@ page 72050012 "Example Journal Templates"
                     FRC='Lots',
                     ENC='Batches';
           Image=Description;
-          RunObject=Page 72050016;
+          RunObject=Page 50016;
           RunPageLink="Journal Template Name"=FIELD(Name);
         }
       }

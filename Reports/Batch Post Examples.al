@@ -1,4 +1,4 @@
-report 72050000 "Batch Post Examples"
+report 50000 "Batch Post Examples"
 {
   // version Exercise 4
 
@@ -97,8 +97,8 @@ report 72050000 "Batch Post Examples"
   var
     PostExamples : TextConst ENU='Posting examples  #1########## @2@@@@@@@@@@@@@';
     ExamplesHaveBeenPosted : TextConst ENU='%1 examples out of a total of %2 have now been posted.';
-    Arguments : Record 72050002;
-    ExPost : Codeunit 72050000;
+    Arguments : Record 50002;
+    ExPost : Codeunit 50000;
     Window : Dialog;
     SongReq : Boolean;
     DanceReq : Boolean;

@@ -1,4 +1,4 @@
-table 72050019 "Example History Two Line"
+table 50019 "Example History Two Line"
 {
   // version Exercise 4
 

@@ -1,4 +1,4 @@
-codeunit 72050110 "Example Notifications"
+codeunit 50110 "Example Notifications"
 {
   // version Exercise 1
 
@@ -7,8 +7,8 @@ codeunit 72050110 "Example Notifications"
   begin
   end;
 
-  [EventSubscriber(ObjectType::Page, 72050020, 'OnAfterGetCurrRecordEvent', '', false, false)]
-  LOCAL PROCEDURE ShowNotificationWhenNoProductPrices(VAR Rec : Record 72050020);
+  [EventSubscriber(ObjectType::Page, 50020, 'OnAfterGetCurrRecordEvent', '', false, false)]
+  LOCAL PROCEDURE ShowNotificationWhenNoProductPrices(VAR Rec : Record 50020);
   var
     MyNotifications : Record "My Notifications";
     ExampleProduct : Record "Example Product";

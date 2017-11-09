@@ -1,4 +1,4 @@
-table 72050011 "Example Entry"
+table 50011 "Example Entry"
 {
   // version Exercise 3
 
@@ -6,8 +6,8 @@ table 72050011 "Example Entry"
             ESM='Mov. recurso',
             FRC='Détails écritures ressources',
             ENC='Ex. Ledger Entry';
-  DrillDownPageID=72050014;
-  LookupPageID=72050014;
+  DrillDownPageID=50014;
+  LookupPageID=50014;
 
   fields
   {

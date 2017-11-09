@@ -1,8 +1,8 @@
-codeunit 72050002 "Ex. Jnl.-Check Line"
+codeunit 50002 "Ex. Jnl.-Check Line"
 {
   // version Exercise 3
 
-  TableNo=72050013;
+  TableNo=50013;
 
   trigger OnRun();
   begin
@@ -21,7 +21,7 @@ codeunit 72050002 "Ex. Jnl.-Check Line"
     AllowPostingFrom : Date;
     AllowPostingTo : Date;
 
-  PROCEDURE RunCheck(VAR ExJnlLine : Record 72050013);
+  PROCEDURE RunCheck(VAR ExJnlLine : Record 50013);
   var
     TableID : ARRAY [10] OF Integer;
     No : ARRAY [10] OF Code[20];

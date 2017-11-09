@@ -1,4 +1,4 @@
-table 72050001 "Sales per Customer"
+table 50001 "Sales per Customer"
 {
   // version Exercise 4
 

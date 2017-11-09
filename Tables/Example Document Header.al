@@ -1,4 +1,4 @@
-table 72050003 "Example Document Header"
+table 50003 "Example Document Header"
 {
   // version Exercise 4
 
@@ -73,7 +73,7 @@ table 72050003 "Example Document Header"
   end;
 
   var
-    ExampleSetup : Record 72050000;
+    ExampleSetup : Record 50000;
     NoSeriesMgt : Codeunit 396;
 
   PROCEDURE AssistEdit() : Boolean;
@@ -88,7 +88,7 @@ table 72050003 "Example Document Header"
 
   PROCEDURE OnValidateExampleNo();
   var
-    ExamplePerson : Record 72050010;
+    ExamplePerson : Record 50010;
   begin
     IF NOT ExamplePerson.GET("Example Person No.") THEN
       ExamplePerson.INIT;
@@ -100,8 +100,8 @@ table 72050003 "Example Document Header"
 
   PROCEDURE Post(HideDialog : Boolean);
   var
-    ExPostYesNo : Codeunit 72050001;
-    ExamplePost : Codeunit 72050000;
+    ExPostYesNo : Codeunit 50001;
+    ExamplePost : Codeunit 50000;
   begin
     IF HideDialog THEN BEGIN
       One := TRUE;
@@ -118,8 +118,8 @@ table 72050003 "Example Document Header"
 
   PROCEDURE GetWeightFromScale();
   var
-    WeightArguments : Record 72050098;
-    GetWeightFromScaleFacade : Codeunit 72050012;
+    WeightArguments : Record 50098;
+    GetWeightFromScaleFacade : Codeunit 50012;
   begin
     GetWeightFromScaleFacade.GetWeight(Rec, WeightArguments);
 

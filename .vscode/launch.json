@@ -1,14 +1,16 @@
 {
     "version": "0.2.0",
     "configurations": [
+        
         {
             "type": "al",
-            "request": "publish",
-            "name": "Publish",
-            "server": "http://localhost",
-            "serverInstance": "Navision_main",                
-            "tenant": "default",
-            "windowsAuthentication": true                        
+            "name": "local server",
+            "request": "launch",
+            "server": "https://navtechdays.westeurope.cloudapp.azure.com",
+            "serverInstance": "NAV",
+            "tenant": "",
+            "authentication": "UserPassword",
+            "startupObjectId": 22     
         }
     ]
 }

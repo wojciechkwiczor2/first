@@ -1,4 +1,4 @@
-table 72050099 "Address Agruments"
+table 50099 "Address Agruments"
 {
   fields
   {

@@ -1,4 +1,4 @@
-codeunit 72050018 "Get Weight From Schouw"
+codeunit 50018 "Get Weight From Schouw"
 {
   // version Exercise 4
 
@@ -7,10 +7,10 @@ codeunit 72050018 "Get Weight From Schouw"
   begin
   end;
 
-  [EventSubscriber(ObjectType::Codeunit, 72050012, 'GetWeightEvent', '', false, false)]
-  LOCAL PROCEDURE GetWightFromPhilips(VAR Rec : Variant;VAR WeightArguments : Record 72050098;VAR Handled : Boolean);
+  [EventSubscriber(ObjectType::Codeunit, 50012, 'GetWeightEvent', '', false, false)]
+  LOCAL PROCEDURE GetWightFromPhilips(VAR Rec : Variant;VAR WeightArguments : Record 50098;VAR Handled : Boolean);
   var
-    GetWeightFromScaleFacade : Codeunit 72050012;
+    GetWeightFromScaleFacade : Codeunit 50012;
   begin
     IF Handled THEN // Test Near
       EXIT;
@@ -24,10 +24,10 @@ codeunit 72050018 "Get Weight From Schouw"
     Handled := TRUE; // Clean Up
   end;
 
-  [EventSubscriber(ObjectType::Page, 72050025, 'OnOpenPageEvent', '', true, true)]
-  LOCAL PROCEDURE RegisterScale(VAR Rec : Record 72050025);
+  [EventSubscriber(ObjectType::Page, 50025, 'OnOpenPageEvent', '', true, true)]
+  LOCAL PROCEDURE RegisterScale(VAR Rec : Record 50025);
   var
-    Scale : Record 72050025;
+    Scale : Record 50025;
   begin
     WITH Rec DO BEGIN
       IF GET('SCHOUW') THEN EXIT;

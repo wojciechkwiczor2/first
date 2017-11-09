@@ -1,4 +1,4 @@
-table 72050018 "Example History Two Header"
+table 50018 "Example History Two Header"
 {
   // version Exercise 4
 

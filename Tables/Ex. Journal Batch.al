@@ -1,4 +1,4 @@
-table 72050014 "Ex. Journal Batch"
+table 50014 "Ex. Journal Batch"
 {
   // version Exercise 3
 
@@ -115,8 +115,8 @@ table 72050014 "Ex. Journal Batch"
   var
     Text000 : TextConst ENU='Only the %1 field can be filled in on recurring journals.';
     Text001 : TextConst ENU='must not be %1';
-    ExJnlTemplate : Record 72050012;
-    ExJnlLine : Record 72050013;
+    ExJnlTemplate : Record 50012;
+    ExJnlLine : Record 50013;
 
   PROCEDURE SetupNewBatch();
   begin

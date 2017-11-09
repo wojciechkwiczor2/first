@@ -1,4 +1,4 @@
-codeunit 72050012 "Get Weight From Scale Facade"
+codeunit 50012 "Get Weight From Scale Facade"
 {
   // version Exercise 4
 
@@ -7,7 +7,7 @@ codeunit 72050012 "Get Weight From Scale Facade"
   begin
   end;
 
-  PROCEDURE GetWeight(Rec : Variant;VAR WeightArguments : Record 72050098);
+  PROCEDURE GetWeight(Rec : Variant;VAR WeightArguments : Record 50098);
   var
     IsHandled : Boolean;
     IsNotHandled : TextConst ENU='There is no Scale';
@@ -18,15 +18,15 @@ codeunit 72050012 "Get Weight From Scale Facade"
       ERROR(IsNotHandled);
   end;
 
-  [Business(false)]
-  LOCAL PROCEDURE GetWeightEvent(VAR Rec : Variant;VAR WeightArguments : Record 72050098;VAR Handled : Boolean);
+  [BusinessEvent(false)]
+  LOCAL PROCEDURE GetWeightEvent(VAR Rec : Variant;VAR WeightArguments : Record 50098;VAR Handled : Boolean);
   begin
   end;
 
   PROCEDURE GetCodeunitIDFromScaleSetup() : Integer;
   var
-    ExampleSetup : Record 72050000;
-    Scale : Record 72050025;
+    ExampleSetup : Record 50000;
+    Scale : Record 50025;
   begin
     WITH ExampleSetup DO BEGIN
       GET;

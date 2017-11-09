@@ -1,8 +1,8 @@
-codeunit 72050009 "Ex. Reg.-Show Ledger"
+codeunit 50009 "Ex. Reg.-Show Ledger"
 {
   // version Exercise 3
 
-  TableNo=72050015;
+  TableNo=50015;
 
   trigger OnRun();
   begin
@@ -11,6 +11,6 @@ codeunit 72050009 "Ex. Reg.-Show Ledger"
   end;
 
   var
-    ExLedgEntry : Record 72050011;
+    ExLedgEntry : Record 50011;
 }
 

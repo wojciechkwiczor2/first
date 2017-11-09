@@ -1,4 +1,4 @@
-codeunit 72050030 "Example-Post Hook"
+codeunit 50030 "Example-Post Hook"
 {
   // version Exercise 4
 
@@ -7,11 +7,11 @@ codeunit 72050030 "Example-Post Hook"
   begin
   end;
 
-  PROCEDURE OnBeforeTestNear(VAR ExampleDocumentHeader : Record 72050003);
+  PROCEDURE OnBeforeTestNear(VAR ExampleDocumentHeader : Record 50003);
   begin
   end;
 
-  PROCEDURE OnAfterDelete(VAR ExampleDocumentHeader : Record 72050003);
+  PROCEDURE OnAfterDelete(VAR ExampleDocumentHeader : Record 50003);
   begin
   end;
 }

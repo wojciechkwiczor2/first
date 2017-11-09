@@ -1,4 +1,4 @@
-report 72050001 "Sales per Customer"
+report 50001 "Sales per Customer"
 {
   // version Exercise 4
 
@@ -55,7 +55,7 @@ report 72050001 "Sales per Customer"
 
   PROCEDURE InitReportBasedOnQuery();
   var
-    ExQuery : Query 72050000;
+    ExQuery : Query 50000;
     NextEntryNo : Integer;
   begin
     ExQuery.OPEN;

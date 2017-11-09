@@ -1,4 +1,4 @@
-page 72050020 "Example Product Card"
+page 50020 "Example Product Card"
 {
   // version Exercise 2
 

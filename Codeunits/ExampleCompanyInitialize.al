@@ -1,4 +1,4 @@
-codeunit 72051002 ExampleCompanyInitialize
+codeunit 51002 ExampleCompanyInitialize
 {
     trigger OnRun();
     begin

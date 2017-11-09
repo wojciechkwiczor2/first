@@ -1,4 +1,4 @@
-page 72050010 "Example Person Card"
+page 50010 "Example Person Card"
 {
   // version Exercise 2
 

@@ -1,8 +1,8 @@
-codeunit 72050005 "Ex. Jnl.-Post"
+codeunit 50005 "Ex. Jnl.-Post"
 {
   // version Exercise 3
 
-  TableNo=72050013;
+  TableNo=50013;
 
   trigger OnRun();
   begin
@@ -18,9 +18,9 @@ codeunit 72050005 "Ex. Jnl.-Post"
     Text003 : TextConst ENU='The journal lines were successfully posted.',ESM='Se han registrado correctamente las líneas del diario.',FRC='Les lignes de journal ont été reportées avec succès.',ENC='The journal lines were successfully posted.';
     Text004 : TextConst ENU='The journal lines were successfully posted. ',ESM='Se han registrado correctamente las líneas del diario. ',FRC='Les lignes de journal ont été reportées avec succès. ',ENC='The journal lines were successfully posted. ';
     Text005 : TextConst ENU='You are now in the %1 journal.',ESM='Se encuentra en el diario %1.',FRC='Vous êtes maintenant dans le journal %1.',ENC='You are now in the %1 journal.';
-    ExJnlTemplate : Record 72050012;
-    ExJnlLine : Record 72050013;
-    ExJnlPostBatch : Codeunit 72050004;
+    ExJnlTemplate : Record 50012;
+    ExJnlLine : Record 50013;
+    ExJnlPostBatch : Codeunit 50004;
     TempJnlBatchName : Code[10];
 
   LOCAL PROCEDURE "Code"();

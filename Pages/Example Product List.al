@@ -1,4 +1,4 @@
-page 72050021 "Example Product List"
+page 50021 "Example Product List"
 {
   // version Exercise 2
 

@@ -1,8 +1,8 @@
-codeunit 72050007 "Ex. Jnl.-B.Post"
+codeunit 50007 "Ex. Jnl.-B.Post"
 {
   // version Exercise 3
 
-  TableNo=72050014;
+  TableNo=50014;
 
   trigger OnRun();
   begin
@@ -16,10 +16,10 @@ codeunit 72050007 "Ex. Jnl.-B.Post"
     Text001 : TextConst ENU='The journals were successfully posted.',ESM='Se han registrado correctamente los diarios.',FRC='Le journal a été reporté avec succès.',ENC='The journals were successfully posted.';
     Text002 : TextConst ENU='It was not possible to post all of the journals. ',ESM='No ha sido posible registrar todos los diarios. ',FRC='Il a été impossible de reporter tous les journaux. ',ENC='It was not possible to post all of the journals. ';
     Text003 : TextConst ENU='The journals that were not successfully posted are now marked.',ESM='Los diarios que no se han registrado están marcados.',FRC='Les journaux qui n''ont pas été reportés sont maintenant indiqués.',ENC='The journals that were not successfully posted are now marked.';
-    ExJnlTemplate : Record 72050012;
-    ExJnlBatch : Record 72050014;
-    ExJnlLine : Record 72050013;
-    ExJnlPostBatch : Codeunit 72050004;
+    ExJnlTemplate : Record 50012;
+    ExJnlBatch : Record 50014;
+    ExJnlLine : Record 50013;
+    ExJnlPostBatch : Codeunit 50004;
     JnlWithErrors : Boolean;
 
   LOCAL PROCEDURE "Code"();

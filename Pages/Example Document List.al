@@ -1,4 +1,4 @@
-page 72050003 "Example Document List"
+page 50003 "Example Document List"
 {
   // version Exercise 4
 

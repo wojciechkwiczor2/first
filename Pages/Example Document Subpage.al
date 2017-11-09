@@ -1,4 +1,4 @@
-page 72050005 "Example Document Subpage"
+page 50005 "Example Document Subpage"
 {
   // version Exercise 4
 

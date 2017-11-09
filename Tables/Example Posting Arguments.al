@@ -1,4 +1,4 @@
-table 72050002 "Example Posting Arguments"
+table 50002 "Example Posting Arguments"
 {
   // version Exercise 4
 

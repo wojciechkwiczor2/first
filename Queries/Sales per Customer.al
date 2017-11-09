@@ -1,4 +1,4 @@
-query 72050000 "Sales per Customer"
+query 50000 "Sales per Customer"
 {
   // version Exercise 4
 

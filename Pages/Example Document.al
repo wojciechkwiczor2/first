@@ -1,4 +1,4 @@
-page 72050004 "Example Document"
+page 50004 "Example Document"
 {
   // version Exercise 4
 
@@ -33,7 +33,7 @@ page 72050004 "Example Document"
         {
         }
       }
-      part(Control11;72050005)
+      part(Control11;50005)
       {
         SubPageLink="Document No."=FIELD("No.");
       }

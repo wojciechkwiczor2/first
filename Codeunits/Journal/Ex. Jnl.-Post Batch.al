@@ -1,8 +1,8 @@
-codeunit 72050004 "Ex. Jnl.-Post Batch"
+codeunit 50004 "Ex. Jnl.-Post Batch"
 {
   // version Exercise 3
 
-  TableNo=72050013;
+  TableNo=50013;
 
   trigger OnRun();
   begin
@@ -20,16 +20,16 @@ codeunit 72050004 "Ex. Jnl.-Post Batch"
     Text005 : TextConst ENU='Posting lines         #3###### @4@@@@@@@@@@@@@',ESM='Registrando líneas    #3###### @4@@@@@@@@@@@@@',FRC='Report des lignes        #3###### @4@@@@@@@@@@@@@',ENC='Posting lines         #3###### @4@@@@@@@@@@@@@';
     Text006 : TextConst ENU='A maximum of %1 posting number series can be used in each journal.',ESM='Se puede utilizar un máximo de %1 números de serie de registro en cada diario.',FRC='Un maximum de %1 séries de numéros de report peuvent être utilisées dans chaque journal.',ENC='A maximum of %1 posting number series can be used in each journal.';
     Text007 : TextConst ENU='<Month Text>',ESM='<Month Text>',FRC='<Month Text>',ENC='<Month Text>';
-    ExJnlTemplate : Record 72050012;
-    ExJnlBatch : Record 72050014;
-    ExJnlLine : Record 72050013;
-    ExJnlLine2 : Record 72050013;
-    ExJnlLine3 : Record 72050013;
-    ExLedgEntry : Record 72050011;
-    ExReg : Record 72050015;
+    ExJnlTemplate : Record 50012;
+    ExJnlBatch : Record 50014;
+    ExJnlLine : Record 50013;
+    ExJnlLine2 : Record 50013;
+    ExJnlLine3 : Record 50013;
+    ExLedgEntry : Record 50011;
+    ExReg : Record 50015;
     NoSeries : Record 308 TEMPORARY;
-    ExJnlCheckLine : Codeunit 72050002;
-    ExJnlPostLine : Codeunit 72050003;
+    ExJnlCheckLine : Codeunit 50002;
+    ExJnlPostLine : Codeunit 50003;
     NoSeriesMgt : Codeunit 396;
     NoSeriesMgt2 : ARRAY [10] OF Codeunit 396;
     Window : Dialog;
@@ -227,7 +227,7 @@ codeunit 72050004 "Ex. Jnl.-Post Batch"
     COMMIT;
   end;
 
-  LOCAL PROCEDURE CheckRecurringLine(VAR ExJnlLine2 : Record 72050013);
+  LOCAL PROCEDURE CheckRecurringLine(VAR ExJnlLine2 : Record 50013);
   begin
     WITH ExJnlLine2 DO BEGIN
       IF "Example Person No." <> '' THEN
@@ -243,7 +243,7 @@ codeunit 72050004 "Ex. Jnl.-Post Batch"
     END;
   end;
 
-  LOCAL PROCEDURE MakeRecurringTexts(VAR ExJnlLine2 : Record 72050013);
+  LOCAL PROCEDURE MakeRecurringTexts(VAR ExJnlLine2 : Record 50013);
   begin
     WITH ExJnlLine2 DO BEGIN
       IF ("Example Person No." <> '') AND ("Recurring Method" <> 0) THEN BEGIN // Not recurring

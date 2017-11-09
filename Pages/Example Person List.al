@@ -1,4 +1,4 @@
-page 72050011 "Example Person List"
+page 50011 "Example Person List"
 {
   // version Exercise 2
 
